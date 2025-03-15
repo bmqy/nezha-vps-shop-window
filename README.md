@@ -9,6 +9,7 @@
 #### 环境变量
 
 `NEZHA_DASHBOARD_DOMAIN` 填写你的哪吒面板域名。
+`VITE_SITE_TITLE` 填写你的站点名称。
 
 ## 自定义
 
