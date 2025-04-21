@@ -4,11 +4,11 @@
     </div>
   </div>
   <div v-else-if="onlyDate" class="flex flex-col items-end justify-start">
-    <div class="text-xs text-nowrap">{{ remainingData.date }}</div>
+    <div class="text-xs text-nowrap">{{ remainingData.date || '-' }}</div>
   </div>
   <div v-else class="flex flex-col items-end justify-start">
-    <div class="text-xs text-nowrap">{{ remainingData.date }}</div>
-    <Progress :class="cn(
+    <div class="text-xs text-nowrap">{{ remainingData.date || '-' }}</div>
+    <Progress v-if="remainingData.date" :class="cn(
     'h-0.5 rounded-none',
     percentageFormat >= 80 && '[&_[data-state=loading]]:bg-red-500',
     (percentageFormat >= 50 && percentageFormat < 80) && '[&_[data-state=loading]]:bg-yellow-500',
